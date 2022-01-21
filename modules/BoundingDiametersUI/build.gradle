@@ -1,0 +1,35 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'nl.liacs'
+version '0.0.1'
+
+nbm {
+    moduleName = 'nl.liacs.boundingdiametersui'
+    homePage = 'http://github.com/gephi/gephi-plugins/boundingdiametersui'
+
+    requires = ['org.openide.windows.WindowManager']
+}
+
+dependencies {
+    nbimplementation project(':BoundingDiameters')
+
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.modules.settings
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.modules.settings
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+    providedCompile libs.netbeans.windows
+
+}

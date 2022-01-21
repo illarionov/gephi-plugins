@@ -1,2 +1,6 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: Convert Excel and csv files to networks
+OpenIDE-Module-Short-Description: Converts Excel files and csv files into networks
+OpenIDE-Module-Long-Description: Converts Excel files and csv files into networks
+OpenIDE-Module-Display-Category: Import
 OpenIDE-Module-Localizing-Bundle: net/clementlevallois/excelcsvimporter/Bundle.properties

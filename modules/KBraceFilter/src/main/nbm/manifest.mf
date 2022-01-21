@@ -1,2 +1,5 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: KBrace Filter
+OpenIDE-Module-Display-Category: Filter
+OpenIDE-Module-Short-Description: K-brace filter which removes less embedded edges
 OpenIDE-Module-Localizing-Bundle: org/gephi/plugins/filter/kbrace/Bundle.properties

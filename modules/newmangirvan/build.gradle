@@ -1,0 +1,27 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.fernuni.theoinf.fapra'
+version '1.0.0'
+
+nbm {
+    moduleName = 'org.fernuni.theoinf.fapra.newman.girvan.plugin'
+    moduleAuthor = 'Andrej Sibirski'
+    homePage = 'http://github.com/gephi/gephi-plugins/newman-girvan-plugin'
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://github.com/jSh4rk/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.util
+}

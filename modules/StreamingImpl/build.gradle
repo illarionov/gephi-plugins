@@ -1,0 +1,27 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '1.0.3'
+
+nbm {
+    moduleName = 'org.gephi.streaming.impl'
+    moduleAuthor = 'Andre Panisson'
+    homePage = 'http://github.com/gephi/gephi-plugins/streaming-impl'
+    // sourceCodeUrl = 'https://github.com/panisson/gephi-plugins/tree/graph-streaming'
+}
+
+dependencies {
+    nbimplementation project(':StreamingAPI')
+
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    annotationProcessor libs.netbeans.filesystems
+    annotationProcessor libs.netbeans.util.lookup
+}

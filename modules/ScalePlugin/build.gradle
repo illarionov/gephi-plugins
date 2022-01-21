@@ -1,0 +1,25 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'imperialcollegelondon'
+version '1.1.0'
+
+nbm {
+    moduleName = 'imperialcollegelondon.scale.plugin'
+    moduleAuthor = 'Huangsong Wei,Imperial College London'
+    homePage = 'http://github.com/gephi/gephi-plugins/scale-plugin'
+    // authorEmail = 'weihs1993@qq.com'
+    // authorUrl = 'https://github.com/weihs/gephi-plugins'
+    // licenseName = 'GPL3.0'
+    // sourceCodeUrl = 'https://github.com/weihs/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+}

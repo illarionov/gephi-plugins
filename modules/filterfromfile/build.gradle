@@ -1,0 +1,26 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'dk.icourts'
+version '1.0.0'
+
+nbm {
+    moduleName = 'dk.icourts.graphfilter'
+    moduleAuthor = 'Ioannis Panagis'
+    homePage = 'http://jura.ku.dk/icourts/staff'
+    // licenseFile = file('apachegpl2.txt')
+    // licenseName = 'Apache 2 GPL'
+    // sourceCodeUrl = 'https://github.com/ypanagis/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

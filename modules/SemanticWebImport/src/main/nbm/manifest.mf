@@ -1,2 +1,6 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: SemanticWebImport
+OpenIDE-Module-Short-Description: Allow to configure the view of rdf and rdfs files.
+OpenIDE-Module-Long-Description: The purpose of this plugin is:\n1. to be able to read .rdfs, .rul and .rdf files;\n2. display the ontology (.rdf);\n3. display the graph of the .rdf, according to the parameters set on the types and relations defined by the ontology.
+OpenIDE-Module-Display-Category: Import
 OpenIDE-Module-Localizing-Bundle: fr/inria/edelweiss/semantic/Bundle.properties

@@ -1,0 +1,38 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.yale.cs.graphics.gephi'
+version '1.0.0'
+
+nbm {
+    moduleName = 'org.yale.cs.graphics.gephi.imagepreview'
+    moduleAuthor = 'Yitzchak Lockerman (Yale Computer Graphics Group)'
+    homePage = 'http://github.com/gephi/gephi-plugins/imagepreview'
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://github.com/totetmatt/gephi-plugins/tree/image-preview'
+
+    requires = ['org.openide.windows.WindowManager']
+
+    publicPackages {
+        add 'org.yale.cs.graphics.gephi.imagepreview'
+    }
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.plugin) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.modules.settings
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.modules.settings
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+    providedCompile libs.netbeans.windows
+}

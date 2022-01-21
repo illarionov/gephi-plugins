@@ -1,2 +1,5 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: Multimode-Networks
+OpenIDE-Module-Display-Category: Tool
+OpenIDE-Module-Short-Description: Multimode Networks Transformations
 OpenIDE-Module-Localizing-Bundle: cz/cvut/fit/gephi/multimode/Bundle.properties

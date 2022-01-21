@@ -1,0 +1,25 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.alexandrebarao'
+version '1.0.0'
+
+nbm {
+    moduleName = 'org.alexandrebarao.network.splitter.3d'
+    moduleAuthor = 'Alexandre Barão'
+    homePage = 'http://github.com/gephi/gephi-plugins/network-splitter-3d'
+    licenseFile = file('gpl-3.0.txt')
+    // licenseName = 'GPL v3'
+    // authorEmail = 'barao.alexandre@gmail.com'
+    // authorUrl = 'https://pt.linkedin.com/in/alexandrebarao'
+    // sourceCodeUrl = 'https://github.com/alexandrebarao'
+}
+
+dependencies {
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+}

@@ -1,0 +1,23 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'oracle.troubadour.co.uk'
+version '0.0.1'
+
+nbm {
+    moduleName = 'oracle.troubadour.co.uk.oracle.driver'
+    moduleAuthor = 'Stuart Turton'
+    homePage = 'http://github.com/gephi/gephi-plugins/oracle-driver'
+    // licenseName = 'BSD'
+    // sourceCodeUrl = 'https://github.com/sturton/gephi-plugins'
+    publicPackages {
+        add 'uk.co.oracletroubadour'
+    }
+}
+
+dependencies {
+    providedCompile(libs.gephi.db.drivers) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+}

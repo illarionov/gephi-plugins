@@ -1,0 +1,30 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'upf'
+version '1.0.0'
+
+nbm {
+    moduleName = 'upf.group.partition.gephi.plugin'
+    moduleAuthor = 'Marc Torrelles, Sergi Puig'
+    homePage = 'http://github.com/gephi/gephi-plugins/group-partition-gephi-plugin'
+    // licenseName = 'Apache 2.0'
+    // authorUrl = 'https://github.com/sergipuig'
+    // sourceCodeUrl = 'https://github.com/sergipuig/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.dialogs
+
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    implementation libs.javax.annotation.api
+}

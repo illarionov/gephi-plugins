@@ -1,0 +1,51 @@
+plugins {
+    id 'netbeans-module'
+}
+
+repositories {
+    maven {
+        url 'https://repo.osgeo.org/repository/release/'
+        mavenContent {
+            includeModule('javax.media', 'jai_core')
+            includeGroup 'org.geotools'
+            includeModule('jgridshift', 'jgridshift')
+        }
+    }
+}
+
+group 'at.granul.gephi'
+version '1.0.0'
+
+nbm {
+    moduleName = 'at.granul.gephi.shpexporter'
+    moduleAuthor = 'Roman Seidl'
+    homePage = 'http://marketplace.gephi.org/plugin/export-to-shp/'
+    // licenseName = 'GPL 3.0'
+
+    publicPackages {
+        add 'at.granul.gephi.shpexporter'
+    }
+}
+
+def geotoolsVersion = "17.2"
+
+dependencies {
+    providedCompile(libs.gephi.batik.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.plugin) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    implementation libs.javax.annotation.api
+    implementation 'com.vividsolutions:jts:1.13'
+    implementation "org.geotools:gt-api:$geotoolsVersion"
+    implementation "org.geotools:gt-main:$geotoolsVersion"
+    implementation "org.geotools:gt-metadata:$geotoolsVersion"
+    implementation "org.geotools:gt-opengis:$geotoolsVersion"
+    implementation "org.geotools:gt-shapefile:$geotoolsVersion"
+}

@@ -1,2 +1,5 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: HttpGraph
+OpenIDE-Module-Short-Description: Generate a graph of the web while you're browsing
+OpenIDE-Module-Display-Category: Generator
 OpenIDE-Module-Localizing-Bundle: net/phreakocious/httpgraph/Bundle.properties

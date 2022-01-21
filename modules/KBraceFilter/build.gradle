@@ -1,0 +1,31 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '1.0.0'
+
+nbm {
+    moduleName = 'org.gephi.kbrace.filter'
+    moduleAuthor = 'Mathieu Bastian'
+    homePage = 'http://github.com/gephi/gephi-plugins/kbrace-filter'
+    // licenseName = 'Apache 2.0'
+    // authorLink = 'https://github.com/mbastian'
+    // sourceCodeUrl = 'https://github.com/mbastian/gephi-plugins/tree/kbrace-filter'
+
+    publicPackages {
+        add 'org.gephi.plugins.filter.kbrace'
+    }
+}
+
+dependencies {
+    providedCompile(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.filters.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

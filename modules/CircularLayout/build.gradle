@@ -1,0 +1,32 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi.layout.plugin'
+version '0.9.2'
+
+nbm {
+    moduleName = 'org.gephi.layout.plugin.circularlayout'
+    moduleAuthor = 'Matt Groeninger'
+    homePage = 'http://gephi.org/plugins/circular-layout/'
+    licenseFile file('BSDLicense')
+    // licenseName = 'BSDLicense'
+    // sourceCodeUrl = 'https://github.com/mgroeninger/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+
+    implementation libs.javax.annotation.api
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.nodes
+
+}

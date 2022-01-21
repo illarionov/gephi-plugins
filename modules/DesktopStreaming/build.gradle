@@ -1,0 +1,38 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '1.0.3'
+
+nbm {
+    moduleName = 'org.gephi.desktop.streaming'
+    moduleAuthor = 'Andre Panisson'
+    homePage = 'http://github.com/gephi/gephi-plugins/desktop-streaming'
+    // sourceCodeUrl = 'https://github.com/panisson/gephi-plugins/tree/graph-streaming'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.lib.validation) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.components) { artifact { type = 'jar' } }
+
+    nbimplementation project(':StreamingAPI')
+    nbimplementation project(':StreamingServer')
+
+    annotationProcessor libs.netbeans.modules.settings
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.explorer
+    providedCompile libs.netbeans.modules.settings
+    providedCompile libs.netbeans.nodes
+    providedCompile libs.netbeans.swing.outline
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+    providedCompile libs.netbeans.windows
+}

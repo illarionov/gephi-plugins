@@ -1,0 +1,26 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'pl.edu.wat.wcy.student'
+version '1.0.0'
+
+nbm {
+    moduleName = 'pl.edu.wat.wcy.student.clustering.coefficient.gephi.plugin'
+    moduleAuthor = 'Kucharski Kisicki'
+    homePage = 'http://github.com/gephi/gephi-plugins/clustering-coefficient-gephi-plugin'
+    // licenseName = 'Apache 2.0'
+    // authorUrl = 'https://github.com/kuchara02'
+    // sourceCodeUrl = 'https://github.com/kuchara02/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util.lookup
+
+}

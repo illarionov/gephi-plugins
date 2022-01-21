@@ -1,2 +1,6 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Display-Category: Layout
+OpenIDE-Module-Long-Description: A simple plugin that calls graphviz at the command line and uses it to lay out a graph. Graphviz has a selection of very high-quality layout algorithms available.
+OpenIDE-Module-Name: Graphviz Layout
+OpenIDE-Module-Short-Description: Graphiz Layout Plugin
 OpenIDE-Module-Localizing-Bundle: org/icculus/chunky/gephigraphviz/Bundle.properties

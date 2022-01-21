@@ -1,0 +1,19 @@
+plugins {
+    id "cz.kubacki.nbm" version '1.17.0' apply false
+    id 'base'
+}
+
+def packageAllNbmModules = tasks.register('nbmAll', Copy) { packageTask ->
+    packageTask.group 'Build'
+    packageTask.description 'Assembles all NBM archives and copy them into one directory'
+    packageTask.into project.layout.buildDirectory.dir("nbm")
+    subprojects { subproject ->
+        def nbmTask = subproject.tasks.named("nbm")
+        packageTask.from nbmTask.flatMap { it.archiveFile }
+        packageTask.dependsOn nbmTask
+    }
+}
+
+tasks.named('assemble').configure {
+    dependsOn packageAllNbmModules
+}

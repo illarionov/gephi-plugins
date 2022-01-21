@@ -1,0 +1,30 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'ia.ppgco.facom.ufu.br'
+version '1.0.1'
+
+nbm {
+    moduleName = 'ia.ppgco.facom.ufu.br.bridge.gephi.plugin'
+    moduleAuthor = 'Getúlio de Morais Pereira, Anderson Rodrigues dos Santos'
+    homePage = 'http://github.com/gephi/gephi-plugins/bridge-gephi-plugin'
+    // licenseName = 'Apache 2.0'
+    // authorEmail = 'santosardr@ufu.br'
+    // sourceCodeUrl = 'https://github.com/santosardr/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

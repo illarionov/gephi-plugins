@@ -1,2 +1,5 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: FilterFromFile
+OpenIDE-Module-Display-Category: Filter
+OpenIDE-Module-Short-Description: A plugin to allow users filter graph by providing a text file with the list of node labels they want to keep
 OpenIDE-Module-Localizing-Bundle: dk/icourts/filterfromfile/Bundle.properties

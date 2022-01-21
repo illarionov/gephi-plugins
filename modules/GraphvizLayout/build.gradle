@@ -1,0 +1,34 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.icculus.chunky'
+version '1.0.0'
+
+nbm {
+    moduleName = 'org.icculus.chunky.gephigraphviz'
+    moduleAuthor = 'Gary \"ChunkyKs\" Briggs'
+    homePage = 'http://github.com/gephi/gephi-plugins/gephigraphviz'
+    licenseFile = file('license.txt')
+    // licenseName = 'license'
+    // authorEmail = 'chunky@icculus.org'
+    // sourceCodeUrl = 'https://github.com/chunky/gephi-plugins'
+
+    publicPackages {
+        add 'org.icculus.chunky.gephigraphviz'
+    }
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.nodes
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

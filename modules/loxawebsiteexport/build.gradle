@@ -1,0 +1,47 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'ec.loxa.sna.gephi.websiteexport'
+version '0.3.2'
+
+nbm {
+    moduleName = 'ec.loxa.sna.gephi.websiteexport.loxawebsiteexport'
+    moduleAuthor = 'Jorge Lopez-Vargas'
+    homePage = 'http://github.com/gephi/gephi-plugins/loxawebsiteexport'
+    // licenseName = 'GPL v3'
+    // authorEmail = 'jorgaf@gmail.com'
+    // authorUrl = 'http://j4loxa.com'
+    // sourceCodeUrl = '>https://github.com/jorgaf/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.desktop.io.export) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.preview) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.lib.validation) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.dialogs
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.windows
+
+    implementation 'com.google.code.gson:gson:2.6.2'
+    implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'org.swinglabs:swing-layout:1.0.3'
+    implementation 'org.zeroturnaround:zt-zip:1.9'
+}

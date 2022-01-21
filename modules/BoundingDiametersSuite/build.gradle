@@ -1,0 +1,19 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'nl.liacs'
+version '0.0.1'
+
+nbm {
+    moduleName = 'nl.liacs.boundingdiametersssuite'
+    moduleAuthor = 'C. Deve, B. Honig, A. Keizer, S. Lin, D. Nieuwenhuizen, T. Oosterhoorn'
+    homePage = 'http://github.com/gephi/gephi-plugins/boundingdiametersssuite'
+    // licenseName = 'GPLv3'
+    // sourceCodeUrl = 'http://github.com/alexiooo/gephi-plugins'
+}
+
+dependencies {
+    nbimplementation project(':BoundingDiameters')
+    nbimplementation project(':BoundingDiametersUI')
+}

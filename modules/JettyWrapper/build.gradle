@@ -1,0 +1,26 @@
+plugins {
+    id 'java-library'
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '1.0.3'
+
+nbm {
+    moduleName = 'org.gephi.jetty.library.wrapper'
+    homePage = 'http://github.com/gephi/gephi-plugins/jetty-library-wrapper'
+
+    publicPackages {
+        add 'javax.servlet.*'
+        add 'javax.servlet.**'
+        add 'org.eclipse.jetty.**'
+    }
+}
+
+def jettyVersion = '8.1.17.v20150415'
+
+dependencies {
+    api "org.eclipse.jetty:jetty-websocket:${jettyVersion}"
+    api "org.eclipse.jetty:jetty-server:${jettyVersion}"
+    api "org.eclipse.jetty:jetty-servlet:${jettyVersion}"
+}

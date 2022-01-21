@@ -1,2 +1,6 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: Minimum Spanning Tree
+OpenIDE-Module-Display-Category: Other Category
+OpenIDE-Module-Short-Description: Calculates a Minimum Spanning Tree for a Graph
+OpenIDE-Module-Long-Description: The Minimum Spanning Tree Gephi Plugin permits users to calculate minimum spanning trees using Kruskal's Algorithm
 OpenIDE-Module-Localizing-Bundle: com/carlschroedl/gephi/plugin/minimumspanningtree/Bundle.properties

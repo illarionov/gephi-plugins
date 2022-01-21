@@ -1,3 +1,7 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: Desktop Streaming
+OpenIDE-Module-Short-Description: Desktop Streaming
+OpenIDE-Module-Long-Description: Desktop Streaming
+OpenIDE-Module-Display-Category: Gephi UI
 OpenIDE-Module-Localizing-Bundle: org/gephi/desktop/streaming/Bundle.properties
 AutoUpdate-Show-In-Client: false

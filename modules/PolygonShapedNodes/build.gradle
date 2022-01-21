@@ -1,0 +1,27 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'comsort'
+version '1.0.0'
+
+nbm {
+    moduleName = 'comsort.polygon.shaped.nodes'
+    moduleAuthor = 'Daniel Iachan'
+    homePage = 'http://github.com/gephi/gephi-plugins/polygon-shaped-nodes'
+    // licenseName = 'Apache 2.0'
+    // authorEmail = 'Daniel.Iachan@merck.com'
+    // authorUrl = 'https://github.com/iachan'
+    // sourceCodeUrl = 'http://github.com/iachan/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.plugin) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

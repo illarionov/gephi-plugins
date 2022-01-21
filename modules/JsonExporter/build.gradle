@@ -1,0 +1,33 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'uk.ac.ox.oii'
+version '2.0.0'
+
+nbm {
+    moduleName = 'uk.ac.ox.oii.jsonexporter.plugin'
+    moduleAuthor = 'Scott A. Hale'
+    homePage = 'http://blogs.oii.ox.ac.uk/vis/'
+    licenseFile = file('gpl-3.0.txt')
+    // licenseName = 'GPL v3'
+    // authorUrl = 'http://www.scotthale.net/'
+    // sourceCodeUrl = 'http://github.com/oxfordinternetinstitute/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    implementation 'com.google.code.gson:gson:2.5'
+}

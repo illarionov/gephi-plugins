@@ -1,0 +1,38 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'com.polinode'
+version '0.9.2'
+
+nbm {
+    moduleName = 'com.polinode.polinodeexporter'
+    moduleAuthor = 'Stephen Rogers, Polinode Pty Ltd'
+    homePage = 'http://github.com/gephi/gephi-plugins/polinodeexporter'
+    licenseFile = file('gpl-3.0.txt')
+    // licenseName = 'GPL v3'
+    // authorUrl = 'http://www.polinode.com'
+    // sourceCodeUrl = 'http://github.com/Polinode/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.desktop.io.export) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.preview.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.dialogs
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.windows
+
+    implementation 'com.google.code.gson:gson:2.5'
+}

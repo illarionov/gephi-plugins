@@ -1,0 +1,27 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.cwts'
+version '1.0.0'
+
+nbm {
+    moduleName = 'org.cwts.leiden.algorithm.gephi.plugin'
+    moduleAuthor = 'Vincent Traag'
+    homePage = 'http://github.com/gephi/gephi-plugins/leiden-algorithm-gephi-plugin'
+    // licenseName = 'MIT'
+    // authorEmail = 'v.a.traag@cwts.leidenuniv.nl'
+    // authorUrl = 'www.traag.net'
+    // sourceCodeUrl = 'http://github.com/vtraag/gephi-leiden-plugin'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+}

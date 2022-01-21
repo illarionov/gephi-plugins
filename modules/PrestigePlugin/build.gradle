@@ -1,0 +1,38 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'ch.michihenninger'
+version '1.0.0'
+
+nbm {
+    moduleName = 'ch.michihenninger.prestige.plugin'
+    moduleAuthor = 'Michael Henninger'
+    homePage = 'http://github.com/gephi/gephi-plugins/prestige-plugin'
+    // licenseName = 'GPLv3'
+    // sourceCodeUrl = 'https://github.com/michihenninger/prestige-gephi-plugin/tree/prestige-plugin'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    implementation 'com.google.guava:guava:23.0'
+
+    testImplementation(libs.gephi.project.api) { artifact { type = 'jar' } }
+    testImplementation 'org.mockito:mockito-core:1.10.19'
+    testImplementation 'org.testng:testng:7.4.0'
+}
+
+test {
+    useTestNG()
+}

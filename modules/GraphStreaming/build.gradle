@@ -1,0 +1,22 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '1.0.3'
+
+nbm {
+    moduleName = 'org.gephi.graphstreaming'
+    moduleAuthor = 'Andre Panisson'
+    homePage = 'gephi.org'
+    // licenseName = 'CDDL 1.0 and GNU GPL v3'
+    // sourceCodeUrl = 'https://github.com/panisson/gephi-plugins/tree/graph-streaming'
+}
+
+dependencies {
+    nbimplementation project(':StreamingAPI')
+    nbimplementation project(':StreamingImpl')
+    nbimplementation project(':StreamingServer')
+    nbimplementation project(':DesktopStreaming')
+    nbimplementation project(':JettyWrapper')
+}

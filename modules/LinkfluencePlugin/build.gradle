@@ -1,0 +1,31 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '0.9.0'
+
+nbm {
+    moduleName = 'org.gephi.linkfluence'
+    moduleAuthor = 'Eduardo Ramos'
+    homePage = 'http://github.com/gephi/gephi-plugins/linkfluence-plugin'
+    licenseFile = file('gpl-3.0.txt')
+    // licenseName = 'GPL v3'
+    // sourceCodeUrl = 'https://github.com/eduramiba/gephi-plugins/tree/linkfluence-plugin'
+    // authorUrl = 'www.wouterspekkink.org'
+}
+
+dependencies {
+    providedCompile(libs.gephi.datalab.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.visualization.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+}

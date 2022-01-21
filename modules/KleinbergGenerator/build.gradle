@@ -1,0 +1,30 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'pl.edu.wat.student.rzepinski.jakub'
+version '1.0.0'
+
+nbm {
+    moduleName = 'pl.edu.wat.student.rzepinski.jakub.kleinberg.generator'
+    moduleAuthor = 'Jakub Rzepiński'
+    homePage = 'http://github.com/gephi/gephi-plugins/kleinberg-generator'
+    // licenseName = 'Apache 2.0'
+    // authorEmail = 'jakub.rzepinski@student.wat.edu.pl'
+    // authorUrl = 'https://github.com/Rzepin'
+    // sourceCodeUrl = 'https://github.com/Rzepin/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.desktop.project) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.generator.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

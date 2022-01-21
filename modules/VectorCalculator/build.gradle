@@ -1,0 +1,27 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'personable.solutions'
+version '0.5.0'
+
+nbm {
+    moduleName = 'personable.solutions.vector.calculator'
+    moduleAuthor = 'Jonas Persson'
+    homePage = 'http://github.com/gephi/gephi-plugins/vector-calculator'
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://github.com/d99joper/gephi-plugins/tree/master/modules/VectorCalculator/'
+
+    requires = ['org.openide.windows.WindowManager']
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

@@ -1,0 +1,76 @@
+plugins {
+    id "cz.kubacki.nbm"
+}
+
+repositories {
+    mavenCentral() {
+        mavenContent {
+            excludeModule('javax.media', 'jai_core')
+        }
+    }
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots/"
+        mavenContent {
+            snapshotsOnly()
+            includeGroup 'org.gephi'
+        }
+    }
+    maven {
+        url "https://netbeans.apidesign.org/maven2"
+        mavenContent {
+            includeGroupByRegex '^org\\.netbeans.*'
+        }
+    }
+    maven {
+        url "https://raw.github.com/gephi/gephi/mvn-thirdparty-repo/"
+        mavenContent {
+            includeGroup 'org.jogamp.gluegen'
+            includeGroup 'org.jogamp.jogl'
+            includeModule('com.connectina.swing', 'fontchooser')
+            includeModule('gython', 'gython')
+            includeModule('net.java.dev', 'colorchooser')
+            includeModule('net.java.dev', 'stax-utils')
+            includeModule('net.java.dev', 'timingframework')
+            includeModule('org.netbeans', 'simple-validation')
+            includeModule('uni-konstanz.de.algo', 'mdsj')
+        }
+    }
+}
+
+version '1.0.0'
+
+compileJava {
+    configure(options) {
+        release = 11
+        // Netbeans annotation processors require access to .property files from resources
+        sourcepath = files(sourceSets.main.resources.srcDirs)
+    }
+}
+
+nbm {
+    needsRestart = true
+    cluster = "plugins"
+
+    implementationVersion = specificationVersion
+
+    archiveFileName = moduleName.map { "${it}-${version}.nbm" }
+
+    generateLastModifiedFile = false
+
+    // Module signing data
+//    keyStore {
+//        keyStoreFile = project.file('keystore')
+//        username = 'myself'
+//        password = 'specialsauce'
+//    }
+}
+
+dependencies {
+    testImplementation libs.netbeans.modules.nbjunit
+    testRuntimeOnly libs.jupiter.engine
+    testRuntimeOnly libs.vintage.engine
+}
+
+test {
+    useJUnitPlatform()
+}

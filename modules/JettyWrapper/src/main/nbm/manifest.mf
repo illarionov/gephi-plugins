@@ -1,3 +1,5 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: Jetty Wrapper
+OpenIDE-Module-Display-Category: Libraries
 OpenIDE-Module-Localizing-Bundle: org/gephi/lib/jetty/Bundle.properties
 AutoUpdate-Show-In-Client: false

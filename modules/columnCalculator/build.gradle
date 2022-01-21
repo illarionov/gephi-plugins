@@ -1,0 +1,29 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'upf-pbsl-group3'
+version '1.0.1'
+
+nbm {
+    moduleName = 'upf.pbsl.group3.column.calculator'
+    moduleAuthor = 'Ivan Andrada, Óscar Font, Xavi Gonzalez'
+    homePage = 'http://github.com/gephi/gephi-plugins/column-calculator'
+    // authorEmail = 'oscar.font01@estudiant.upf.edu'
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://github.com/oscarfont/gephi-plugins/tree/gh-column-calculator-plugin'
+}
+
+dependencies {
+    providedCompile(libs.gephi.datalab.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.datalab.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    implementation 'net.objecthunter:exp4j:0.4.8'
+}

@@ -1,0 +1,27 @@
+pluginManagement {
+    includeBuild("gradle-build-logic/plugins")
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url 'https://repo.gradle.org/gradle/libs-releases'
+        }
+    }
+}
+
+enableFeaturePreview('VERSION_CATALOGS')
+
+rootProject.name = 'Gephi-Plugins'
+
+file("modules").eachDir { dir ->
+    include dir.name
+    project(":${dir.name}").projectDir = dir
+}
+
+startParameter.projectProperties += ['git.root': rootProject.projectDir]
+
+includeBuild("gradle-build-logic/gradle-nbm-plugin") {
+    name='gradle-nbm-plugin'
+    dependencySubstitution {
+        substitute module("cz.kubacki.gradle.plugins:gradle-nbm-plugin") using project(':nbmPlugin')
+    }
+}

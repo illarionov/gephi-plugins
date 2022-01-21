@@ -1,0 +1,58 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'SimilarityComputer'
+version '1.1.3'
+
+nbm {
+    moduleName = 'SimilarityComputer.SimilarityComputer'
+    moduleAuthor = 'Clement Levalllois (@seinecle)'
+    homePage = 'http://www.clementlevallois.net'
+    licenseFile = file('Apache v2.txt')
+    // licenseName = 'Apache v2'
+    // sourceCodeUrl = 'https://github.com/seinecle/gephi-plugins/tree/similaritycomputer'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.datalab.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.datalab.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.desktop.project) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.directory.chooser) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.filters.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.generator.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.generator.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.processor.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.mostrecentfiles.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.perspective.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.tools.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.components) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.visualization) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.visualization.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.dialogs
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+
+    implementation 'com.google.guava:guava:23.0'
+    implementation 'net.sourceforge.javacsv:javacsv:2.0'
+    implementation 'org.apache.poi:poi-ooxml:3.15'
+    implementation('com.googlecode.matrix-toolkits-java:mtj:1.0.4') {
+        exclude group: 'com.github.fommil.netlib', module: 'all'
+    }
+}

@@ -1,0 +1,27 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'wouterspekkink'
+version '1.0.0'
+
+nbm {
+    moduleName = 'wouterspekkink.eventgraphlayout'
+    moduleAuthor = 'Wouter Spekkink'
+    homePage = 'http://github.com/gephi/gephi-plugins/eventgraphlayout'
+    // licenseName = 'GPL 3.0'
+    // authorEmail = 'wouterspekkink@gmail.com'
+    // authorUrl = 'www.wouterspekkink.org'
+    // sourceCodeUrl = 'https://github.com/WouterSpekkink/gephi-plugins/tree/eventgraphlayout'
+}
+
+dependencies {
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util
+}

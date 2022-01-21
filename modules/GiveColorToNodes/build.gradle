@@ -1,0 +1,26 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'net.clementlevallois'
+version '1.0.0'
+
+nbm {
+    moduleName = 'net.clementlevallois.givecolortonodes'
+    moduleAuthor = 'Clement Levallois (@seinecle)'
+    licenseFile = file('Apache v2.txt')
+    homePage = 'http://www.clementlevallois.net'
+    // licenseName = 'Apache v2'
+    // sourceCodeUrl = 'https://github.com/seinecle/gephi-plugins/tree/GiveColorsToNodes'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.tools.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.util.lookup
+}

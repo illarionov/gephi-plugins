@@ -1,2 +1,6 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: Map Of Countries
+OpenIDE-Module-Display-Category: Layout
 OpenIDE-Module-Localizing-Bundle: net/clementlevallois/mapofcountries/Bundle.properties
+OpenIDE-Module-Short-Description: A layout to display maps in the background of networks
+OpenIDE-Module-Long-Description: A layout to display maps in the backgrounds of networks

@@ -1,0 +1,29 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'com.hypercities'
+version '1.0.0'
+
+nbm {
+    moduleName = 'com.hypercities.exporttoearth'
+    moduleAuthor = 'Dave Shepard'
+    homePage = 'http://github.com/gephi/gephi-plugins/exporttoearth'
+    licenseFile = file('bsd-3clause-license.txt')
+    // licenseName = '3-clause BSD'
+    // sourceCodeUrl = 'http://github.com/shepdl/gephi-plugins/tree/export-to-earth'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    implementation 'de.micromata.jak:JavaAPIforKml:2.2.1'
+}

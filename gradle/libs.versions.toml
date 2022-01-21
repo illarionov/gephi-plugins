@@ -1,0 +1,115 @@
+[versions]
+junit = "5.8.2"
+gephi = "0.9.3-SNAPSHOT"
+netbeans = "RELEASE82"
+
+gradle-nbm-plugin = "1.17.0"
+
+[libraries]
+gephi-algorithms-plugin = { module = "org.gephi:algorithms-plugin", version.ref = "gephi" }
+gephi-appearance-api = { module = "org.gephi:appearance-api", version.ref = "gephi" }
+gephi-appearance-plugin = { module = "org.gephi:appearance-plugin", version.ref = "gephi" }
+gephi-appearance-plugin-ui = { module = "org.gephi:appearance-plugin-ui", version.ref = "gephi" }
+gephi-batik-wrapper = { module = "org.gephi:batik-wrapper", version.ref = "gephi" }
+gephi-core-library-wrapper = { module = "org.gephi:core-library-wrapper", version.ref = "gephi" }
+gephi-datalab-api = { module = "org.gephi:datalab-api", version.ref = "gephi" }
+gephi-datalab-plugin = { module = "org.gephi:datalab-plugin", version.ref = "gephi" }
+gephi-db-drivers = { module = "org.gephi:db-drivers", version.ref = "gephi" }
+gephi-desktop-appearance = { module = "org.gephi:desktop-appearance", version.ref = "gephi" }
+gephi-desktop-banner = { module = "org.gephi:desktop-banner", version.ref = "gephi" }
+gephi-desktop-branding = { module = "org.gephi:desktop-branding", version.ref = "gephi" }
+gephi-desktop-context = { module = "org.gephi:desktop-context", version.ref = "gephi" }
+gephi-desktop-datalab = { module = "org.gephi:desktop-datalab", version.ref = "gephi" }
+gephi-desktop-filters = { module = "org.gephi:desktop-filters", version.ref = "gephi" }
+gephi-desktop-generate = { module = "org.gephi:desktop-generate", version.ref = "gephi" }
+gephi-desktop-import = { module = "org.gephi:desktop-import", version.ref = "gephi" }
+gephi-desktop-io-export = { module = "org.gephi:desktop-io-export", version.ref = "gephi" }
+gephi-desktop-layout = { module = "org.gephi:desktop-layout", version.ref = "gephi" }
+gephi-desktop-preview = { module = "org.gephi:desktop-preview", version.ref = "gephi" }
+gephi-desktop-progress = { module = "org.gephi:desktop-progress", version.ref = "gephi" }
+gephi-desktop-project = { module = "org.gephi:desktop-project", version.ref = "gephi" }
+gephi-desktop-recent-files = { module = "org.gephi:desktop-recent-files", version.ref = "gephi" }
+gephi-desktop-statistics = { module = "org.gephi:desktop-statistics", version.ref = "gephi" }
+gephi-desktop-timeline = { module = "org.gephi:desktop-timeline", version.ref = "gephi" }
+gephi-desktop-tools = { module = "org.gephi:desktop-tools", version.ref = "gephi" }
+gephi-directory-chooser = { module = "org.gephi:directory-chooser", version.ref = "gephi" }
+gephi-export-plugin-ui = { module = "org.gephi:export-plugin-ui", version.ref = "gephi" }
+gephi-filters-api = { module = "org.gephi:filters-api", version.ref = "gephi" }
+gephi-filters-impl = { module = "org.gephi:filters-impl", version.ref = "gephi" }
+gephi-filters-plugin = { module = "org.gephi:filters-plugin", version.ref = "gephi" }
+gephi-filters-plugin-ui = { module = "org.gephi:filters-plugin-ui", version.ref = "gephi" }
+gephi-generator-plugin-ui = { module = "org.gephi:generator-plugin-ui", version.ref = "gephi" }
+gephi-gleem = { module = "org.gephi:gleem", version.ref = "gephi" }
+gephi-graph-api = { module = "org.gephi:graph-api", version.ref = "gephi" }
+gephi-import-plugin-ui = { module = "org.gephi:import-plugin-ui", version.ref = "gephi" }
+gephi-io-exporter-api = { module = "org.gephi:io-exporter-api", version.ref = "gephi" }
+gephi-io-exporter-plugin = { module = "org.gephi:io-exporter-plugin", version.ref = "gephi" }
+gephi-io-exporter-preview = { module = "org.gephi:io-exporter-preview", version.ref = "gephi" }
+gephi-io-generator-api = { module = "org.gephi:io-generator-api", version.ref = "gephi" }
+gephi-io-generator-plugin = { module = "org.gephi:io-generator-plugin", version.ref = "gephi" }
+gephi-io-importer-api = { module = "org.gephi:io-importer-api", version.ref = "gephi" }
+gephi-io-importer-plugin = { module = "org.gephi:io-importer-plugin", version.ref = "gephi" }
+gephi-io-processor-plugin = { module = "org.gephi:io-processor-plugin", version.ref = "gephi" }
+gephi-layout-api = { module = "org.gephi:layout-api", version.ref = "gephi" }
+gephi-layout-plugin = { module = "org.gephi:layout-plugin", version.ref = "gephi" }
+gephi-lib-validation = { module = "org.gephi:lib.validation", version.ref = "gephi" }
+gephi-mostrecentfiles-api = { module = "org.gephi:mostrecentfiles-api", version.ref = "gephi" }
+gephi-perspective-api = { module = "org.gephi:perspective-api", version.ref = "gephi" }
+gephi-preview-api = { module = "org.gephi:preview-api", version.ref = "gephi" }
+gephi-preview-export-ui = { module = "org.gephi:preview-export-ui", version.ref = "gephi" }
+gephi-preview-plugin = { module = "org.gephi:preview-plugin", version.ref = "gephi" }
+gephi-processor-plugin-ui = { module = "org.gephi:processor-plugin-ui", version.ref = "gephi" }
+gephi-project-api = { module = "org.gephi:project-api", version.ref = "gephi" }
+gephi-project-ui = { module = "org.gephi:project-ui", version.ref = "gephi" }
+gephi-settings-upgrader = { module = "org.gephi:settings-upgrader", version.ref = "gephi" }
+gephi-statistics-api = { module = "org.gephi:statistics-api", version.ref = "gephi" }
+gephi-statistics-plugin = { module = "org.gephi:statistics-plugin", version.ref = "gephi" }
+gephi-statistics-plugin-ui = { module = "org.gephi:statistics-plugin-ui", version.ref = "gephi" }
+gephi-timeline-api = { module = "org.gephi:timeline-api", version.ref = "gephi" }
+gephi-tools-api = { module = "org.gephi:tools-api", version.ref = "gephi" }
+gephi-tools-plugin = { module = "org.gephi:tools-plugin", version.ref = "gephi" }
+gephi-ui-components = { module = "org.gephi:ui-components", version.ref = "gephi" }
+gephi-ui-library-wrapper = { module = "org.gephi:ui-library-wrapper", version.ref = "gephi" }
+gephi-ui-utils = { module = "org.gephi:ui-utils", version.ref = "gephi" }
+gephi-utils = { module = "org.gephi:utils", version.ref = "gephi" }
+gephi-utils-longtask = { module = "org.gephi:utils-longtask", version.ref = "gephi" }
+gephi-visualization = { module = "org.gephi:visualization", version.ref = "gephi" }
+gephi-visualization-api = { module = "org.gephi:visualization-api", version.ref = "gephi" }
+gephi-welcome-screen = { module = "org.gephi:welcome-screen", version.ref = "gephi" }
+
+netbeans-api-annotations-common = { module = "org.netbeans.api:org-netbeans-api-annotations-common", version.ref = "netbeans" }
+netbeans-api-progress = { module = "org.netbeans.api:org-netbeans-api-progress", version.ref = "netbeans" }
+netbeans-api-progress-nb = { module = "org.netbeans.api:org-netbeans-api-progress-nb", version.ref = "netbeans" }
+netbeans-awt = { module = "org.netbeans.api:org-openide-awt", version.ref = "netbeans" }
+netbeans-core-output2 = { module = "org.netbeans.modules:org-netbeans-core-output2", version.ref = "netbeans" }
+netbeans-dialogs = { module = "org.netbeans.api:org-openide-dialogs", version.ref = "netbeans" }
+netbeans-explorer = { module = "org.netbeans.api:org-openide-explorer", version.ref = "netbeans" }
+netbeans-filesystems = { module = "org.netbeans.api:org-openide-filesystems", version.ref = "netbeans" }
+netbeans-io = { module = "org.netbeans.api:org-openide-io", version.ref = "netbeans" }
+netbeans-modules = { module = "org.netbeans.api:org-openide-modules", version.ref = "netbeans" }
+netbeans-modules-masterfs = { module = "org.netbeans.modules:org-netbeans-modules-masterfs", version.ref = "netbeans" }
+netbeans-modules-nbjunit = { module = "org.netbeans.api:org-netbeans-modules-nbjunit", version.ref = "netbeans" }
+netbeans-modules-options-api = { module = "org.netbeans.api:org-netbeans-modules-options-api", version.ref = "netbeans" }
+netbeans-modules-sendopts = { module = "org.netbeans.api:org-netbeans-modules-sendopts", version.ref = "netbeans" }
+netbeans-modules-settings = { module = "org.netbeans.api:org-netbeans-modules-settings", version.ref = "netbeans" }
+netbeans-nodes = { module = "org.netbeans.api:org-openide-nodes", version.ref = "netbeans" }
+netbeans-oswing-tabcontrol = { module = "org.netbeans.api:org-netbeans-swing-tabcontrol", version.ref = "netbeans" }
+netbeans-swing-outline = { module = "org.netbeans.api:org-netbeans-swing-outline", version.ref = "netbeans" }
+netbeans-util = { module = "org.netbeans.api:org-openide-util", version.ref = "netbeans" }
+netbeans-util-lookup = { module = "org.netbeans.api:org-openide-util-lookup", version.ref = "netbeans" }
+netbeans-util-ui = { module = "org.netbeans.api:org-openide-util-ui", version.ref = "netbeans" }
+netbeans-windows = { module = "org.netbeans.api:org-openide-windows", version.ref = "netbeans" }
+
+javax-annotation-api = {module = 'javax.annotation:javax.annotation-api', version = '1.3.2'}
+
+jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "junit" }
+jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "junit" }
+vintage-engine = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit" }
+
+
+
+[bundles]
+gephi-basic = ["gephi-project-api", "gephi-utils-longtask"]
+
+[plugins]
+nbm = {id = "cz.kubacki.nbm" }

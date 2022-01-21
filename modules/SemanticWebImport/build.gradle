@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'netbeans-module'
+}
+
+group 'fr.inria.edelweiss'
+version '1.0.0'
+
+nbm {
+    moduleName = 'fr.inria.edelweisssemantic.semantic'
+    moduleAuthor = 'Erwan Demairy'
+    homePage = 'http://wiki.gephi.org/SemanticWebImport'
+    licenseFile = file('Licence_CeCILL-C_V1-en.txt')
+    // licenseName = 'Licence_CeCILL-C_V1-en'
+    // sourceCodeUrl = 'https://github.com/Wimmics/gephi-semantic-web-import'
+}
+
+dependencies {
+    providedCompile(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.processor.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.modules.settings
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.filesystems
+    providedCompile libs.netbeans.modules.settings
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+    providedCompile libs.netbeans.windows
+
+    implementation 'com.hp.hpl.jena:jena:2.6.4'
+    implementation 'commons-httpclient:commons-httpclient:3.1'
+    implementation 'fr.inria.wimmics:corese:3.2.1'
+    implementation 'fr.inria.wimmics:kgengine:3.2.1'
+    implementation 'org.slf4j:slf4j-log4j12:1.7.13'
+}

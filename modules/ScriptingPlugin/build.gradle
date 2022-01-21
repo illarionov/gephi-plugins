@@ -1,0 +1,43 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '0.9.2'
+
+nbm {
+    moduleName = 'org.gephi.scripting.plugin'
+    moduleAuthor = 'Luiz Ribeiro'
+    homePage = 'https://github.com/gephi/gephi/wiki/Scripting-Plugin'
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins/tree/python-scripting-plugin'
+}
+
+def copyNbmResourcesTask = tasks.register('copyNbmResources', Copy) {
+    from layout.projectDirectory.dir('py')
+    into project.extensions.getByName('nbm').nbmModuleBuildDir.map { it.dir('py') }
+}
+tasks.named("netbeans").configure {
+    dependsOn copyNbmResourcesTask
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.filters.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.awt
+    annotationProcessor libs.netbeans.modules.settings
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.modules
+    providedCompile libs.netbeans.modules.settings
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.windows
+
+    implementation 'gython:gython:1.0'
+}

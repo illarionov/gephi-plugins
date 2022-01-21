@@ -1,0 +1,41 @@
+plugins {
+    id 'netbeans-module'
+    id 'net.saliman.cobertura' version '4.0.0'
+}
+
+group 'com.carlschroedl.gephi'
+version '1.0.0'
+
+nbm {
+    moduleName = 'com.carlschroedl.gephi.spanning.tree.plugin'
+    moduleAuthor = 'Carl Schroedl carlschroedl@gmail.com'
+    homePage = 'https://github.com/carlschroedl/gephi-plugins/tree/minimum-spanning-tree-plugin'
+    licenseFile = file('gpl-3.0.txt')
+    // licenseName = 'gpl-3.0'
+    // sourceCodeUrl = 'https://github.com/carlschroedl/gephi-plugins'
+
+    publicPackages {
+        add 'com.carlschroedl.gephi.plugin.minimumspanningtree'
+    }
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.processor.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    testImplementation libs.netbeans.modules.masterfs
+    testImplementation(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    testImplementation(libs.gephi.filters.impl) { artifact { type = 'jar' } }
+    testImplementation(libs.gephi.filters.plugin) { artifact { type = 'jar' } }
+    testImplementation(libs.gephi.project.api) { artifact { type = 'jar' } }
+    testImplementation(libs.gephi.utils) { artifact { type = 'jar' } }
+}

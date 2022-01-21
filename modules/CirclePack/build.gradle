@@ -1,0 +1,26 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'sasaki'
+version '1.0.0'
+
+nbm {
+    moduleName = 'sasaki.circle.pack'
+    moduleAuthor = 'Patrick Murray, Ken Goulding'
+    homePage = 'http://github.com/gephi/gephi-plugins/circle-pack'
+    // licenseName = 'Apache 2.0'
+    // authorEmail = 'pmurray@sasaki.com'
+    // sourceCodeUrl = 'https://github.com/sasakiassociates/gephi-plugins/tree/circlePack'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+}

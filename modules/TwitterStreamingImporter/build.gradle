@@ -1,0 +1,38 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'totetmatt'
+version '1.4.3'
+
+nbm {
+    moduleName = 'totetmatt.twitter.streaming.importer'
+    moduleAuthor = '@totetmatt'
+    homePage = 'http://github.com/gephi/gephi-plugins/twitter-streaming-importer'
+    // authorEmail = 'matthieu.totet@gmail.com'
+    // authorUrl = 'http://matthieu-totet.fr/'
+    // sourceCodeUrl = 'https://github.com/totetmatt/gephi-plugins/tree/twitter'
+    // licenseName = 'Apache 2.0'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.modules.settings
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.modules.settings
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.windows
+
+    implementation 'com.vdurmont:emoji-java:4.0.0'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'org.twitter4j:twitter4j-core:4.0.7'
+    implementation 'org.twitter4j:twitter4j-media-support:4.0.6'
+    implementation 'org.twitter4j:twitter4j-stream:4.0.7'
+}

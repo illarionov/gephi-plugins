@@ -1,0 +1,4 @@
+[submodule "gradle-build-logic/gradle-nbm-plugin"]
+	path = gradle-build-logic/gradle-nbm-plugin
+	url = https://github.com/illarionov/gradle-nbm-plugin.git
+	branch = trunk

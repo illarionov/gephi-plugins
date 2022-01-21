@@ -1,3 +1,7 @@
 Manifest-Version: 1.0
+OpenIDE-Module-Name: Streaming Impl
+OpenIDE-Module-Long-Description: Streaming Implementation
+OpenIDE-Module-Short-Description: Streaming Implementation
+OpenIDE-Module-Display-Category: Gephi Core
 OpenIDE-Module-Localizing-Bundle: org/gephi/streaming/impl/Bundle.properties
 AutoUpdate-Show-In-Client: false
