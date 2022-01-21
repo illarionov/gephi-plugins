@@ -1,9 +1,8 @@
 package fr.inria.edelweiss.sparql.restdriver;
 
 import fr.inria.edelweiss.sparql.DriverParametersPanel;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.Observable;
+
+import java.util.*;
 import javax.swing.table.DefaultTableModel;
 
 /*
@@ -373,11 +372,11 @@ public class SparqlRestEndPointDriverParametersPanel
     private javax.swing.JTextField urlTextField;
     // End of variables declaration//GEN-END:variables
 
-    void fillMap(Map<String, String> map) {
-        ArrayList<ArrayList<String>> data = new ArrayList<ArrayList<String>>(restParametersModel.getDataVector());
+    @SuppressWarnings("rawtypes")
+    void fillMap(Map<Object, Object> map) {
+        List<Vector> data = new ArrayList<Vector>(restParametersModel.getDataVector());
         map.clear();
-        for (int row = 0; row < data.size(); ++row) {
-            ArrayList<String> currentRow = data.get(row);
+        for (Vector currentRow : data) {
             map.put(currentRow.get(0), currentRow.get(1));
         }
     }

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="lineage" />
+        <module name="givecolortonodes" />
+        <module name="kbrace-filter" />
+        <module name="group-partition-gephi-plugin" />
+        <module name="clustering-coefficient-gephi-plugin" />
+        <module name="geolayout-plugin" />
+        <module name="ExcelCsvImporter" />
+        <module name="mdslayout" />
+        <module name="jetty-library-wrapper" />
+        <module name="column-calculator" />
+        <module name="gravity-plugin" />
+        <module name="polygon-shaped-nodes" />
+        <module name="loxawebsiteexport" />
+        <module name="scale-plugin" />
+        <module name="oracle-driver" />
+        <module name="hairball-buster" />
+        <module name="eventgraphlayout" />
+        <module name="kleinberg-generator" />
+        <module name="exporttoearth" />
+        <module name="sigmaexporter" />
+        <module name="mdsmetric" />
+        <module name="network-splitter-3d" />
+        <module name="gephigraphviz" />
+        <module name="boundingdiametersssuite" />
+        <module name="spanning-tree-plugin" />
+        <module name="dbscan-gephi-plugin" />
+        <module name="graphstreaming" />
+        <module name="streaming-impl" />
+        <module name="circle-pack" />
+        <module name="boundingdiameters" />
+        <module name="vector-calculator" />
+        <module name="mapofcountries" />
+        <module name="polinodeexporter" />
+        <module name="circularlayout" />
+        <module name="streaming-server" />
+        <module name="newman-girvan-plugin" />
+        <module name="isometric-layout" />
+        <module name="semantic" />
+        <module name="multimode" />
+        <module name="desktop-streaming" />
+        <module name="scripting.plugin" />
+        <module name="gephi-plugin-node-color-manager" />
+        <module name="bridge-gephi-plugin" />
+        <module name="twitter-streaming-importer" />
+        <module name="jsonexporter-plugin" />
+        <module name="leiden-algorithm-gephi-plugin" />
+        <module name="prestige-plugin" />
+        <module name="linkfluence-plugin" />
+        <module name="givecolortoedges" />
+        <module name="streaming-api" />
+        <module name="imagepreview" />
+        <module name="boundingdiametersui" />
+        <module name="graphfilter" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="agensgraph-plugin" target="1.7" />
+      <module name="httpgraph" target="1.5" />
+      <module name="SimilarityComputer" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

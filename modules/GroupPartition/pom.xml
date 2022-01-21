@@ -38,12 +38,17 @@
         </dependency>
         <dependency>
             <groupId>org.gephi</groupId>
-            <artifactId>utils-longtask</artifactId>    
-        </dependency> 
+            <artifactId>utils-longtask</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.gephi</groupId>
-            <artifactId>project-api</artifactId>  
-        </dependency>     
+            <artifactId>project-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.annotation</groupId>
+            <artifactId>javax.annotation-api</artifactId>
+            <version>1.3.2</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -65,5 +70,3 @@
         </plugins>
     </build>
 </project>
-
-
