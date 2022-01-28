@@ -1,5 +1,6 @@
 plugins {
     id "cz.kubacki.nbm"
+    id 'maven-publish'
 }
 
 repositories {
@@ -73,4 +74,26 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+publishing {
+    publications {
+        library(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            name 'LocalRepo'
+            url rootProject.layout.buildDirectory.dir('repo')
+        }
+    }
+}
+
+afterEvaluate {
+    if (nbm.moduleName.get().startsWith(project.group.toString() + ".")) {
+        publishing.publications.each {
+            it.artifactId = nbm.moduleName.get().substring(project.group.toString().length() + 1)
+        }
+    }
 }
