@@ -1,7 +1,7 @@
 [versions]
 junit = "5.8.2"
-gephi = "0.9.3"
-netbeans = "RELEASE82"
+gephi = "0.9.4"
+netbeans = "RELEASE130"
 
 gradle-nbm-plugin = "1.17.0"
 
