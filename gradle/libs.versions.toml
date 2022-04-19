@@ -1,6 +1,6 @@
 [versions]
 junit = "5.8.2"
-gephi = "0.9.3-SNAPSHOT"
+gephi = "0.9.3"
 netbeans = "RELEASE82"
 
 gradle-nbm-plugin = "1.17.0"
@@ -49,10 +49,8 @@ gephi-io-generator-api = { module = "org.gephi:io-generator-api", version.ref = 
 gephi-io-generator-plugin = { module = "org.gephi:io-generator-plugin", version.ref = "gephi" }
 gephi-io-importer-api = { module = "org.gephi:io-importer-api", version.ref = "gephi" }
 gephi-io-importer-plugin = { module = "org.gephi:io-importer-plugin", version.ref = "gephi" }
-gephi-io-processor-plugin = { module = "org.gephi:io-processor-plugin", version.ref = "gephi" }
 gephi-layout-api = { module = "org.gephi:layout-api", version.ref = "gephi" }
 gephi-layout-plugin = { module = "org.gephi:layout-plugin", version.ref = "gephi" }
-gephi-lib-validation = { module = "org.gephi:lib.validation", version.ref = "gephi" }
 gephi-mostrecentfiles-api = { module = "org.gephi:mostrecentfiles-api", version.ref = "gephi" }
 gephi-perspective-api = { module = "org.gephi:perspective-api", version.ref = "gephi" }
 gephi-preview-api = { module = "org.gephi:preview-api", version.ref = "gephi" }

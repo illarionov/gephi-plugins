@@ -3,15 +3,15 @@ plugins {
 }
 
 group 'org.gephi'
-version '1.0.0'
+version '1.1.0'
 
 nbm {
     moduleName = 'org.gephi.kbrace.filter'
     moduleAuthor = 'Mathieu Bastian'
-    homePage = 'http://github.com/gephi/gephi-plugins/kbrace-filter'
+    homePage = 'https://gephi.org/plugins/#/plugin/kbrace-filter'
     // licenseName = 'Apache 2.0'
     // authorLink = 'https://github.com/mbastian'
-    // sourceCodeUrl = 'https://github.com/mbastian/gephi-plugins/tree/kbrace-filter'
+    // sourceCodeUrl = 'https://github.com/mbastian/gephi-plugins/tree/kbrace-filter-plugin'
 
     publicPackages {
         add 'org.gephi.plugins.filter.kbrace'

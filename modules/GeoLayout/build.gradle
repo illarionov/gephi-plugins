@@ -3,12 +3,12 @@ plugins {
 }
 
 group 'org.gephi'
-version '0.9.2.2'
+version '0.9.3'
 
 nbm {
     moduleName = 'org.gephi.geolayout.plugin'
     moduleAuthor = 'Alexis Jacomy'
-    homePage = 'http://github.com/gephi/gephi-plugins/geolayout-plugin'
+    homePage = 'https://github.com/gephi/gephi-plugins/tree/geolayout-plugin'
     licenseFile = file('gpl-3.0.txt')
     // licenseName = 'GPL v3'
 }

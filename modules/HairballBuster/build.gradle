@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'johns-hopkins-university.applied-phyics-laboratory'
-version '0.9.2'
+version '0.9.3'
 
 nbm {
     moduleName = 'johns.hopkins.university.applied.phyics.laboratory.hairball.buster'

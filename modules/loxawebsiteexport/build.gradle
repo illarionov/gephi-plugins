@@ -22,7 +22,6 @@ dependencies {
     providedCompile(libs.gephi.io.exporter.api) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.io.exporter.plugin) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.io.exporter.preview) { artifact { type = 'jar' } }
-    providedCompile(libs.gephi.lib.validation) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.preview.api) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.preview.plugin) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }

@@ -10,7 +10,7 @@ nbm {
     moduleAuthor = 'Clement Levallois'
     homePage = 'http://www.clementlevallois.net'
     licenseFile = file('Apache v2.txt')
-    // licenseName = 'Apache v2'
+    // licenseName = 'Apache 2.0'
     // sourceCodeUrl = 'https://github.com/seinecle/gephi-plugins/tree/mapOfCountriesBranch'
 }
 

@@ -14,9 +14,9 @@ nbm {
 
 dependencies {
     providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
-    providedCompile(libs.gephi.lib.validation) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.ui.components) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
 
     nbimplementation project(':StreamingAPI')
     nbimplementation project(':StreamingServer')

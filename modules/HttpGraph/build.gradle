@@ -28,11 +28,11 @@ dependencies {
     providedCompile(libs.gephi.io.generator.api) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.io.generator.plugin) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
-    providedCompile(libs.gephi.io.processor.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.plugin) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.layout.plugin) { artifact { type = 'jar' } }
-    providedCompile(libs.gephi.lib.validation) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.utils) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
 
     annotationProcessor libs.netbeans.util
