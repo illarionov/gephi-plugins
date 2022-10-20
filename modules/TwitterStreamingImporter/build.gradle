@@ -3,15 +3,15 @@ plugins {
 }
 
 group 'totetmatt'
-version '1.4.3'
+version '1.4.4'
 
 nbm {
     moduleName = 'totetmatt.twitter.streaming.importer'
-    moduleAuthor = '@totetmatt'
+    moduleAuthor = 'totetmatt'
     homePage = 'http://github.com/gephi/gephi-plugins/twitter-streaming-importer'
-    // authorEmail = 'matthieu.totet@gmail.com'
-    // authorUrl = 'http://matthieu-totet.fr/'
-    // sourceCodeUrl = 'https://github.com/totetmatt/gephi-plugins/tree/twitter'
+    // authorEmail = 'matthieu.totet+tsi@gmail.com'
+    // authorUrl = 'http://totetmatt.fr'
+    // sourceCodeUrl = 'https://github.com/totetmatt/gephi-plugins.git'
     // licenseName = 'Apache 2.0'
 }
 

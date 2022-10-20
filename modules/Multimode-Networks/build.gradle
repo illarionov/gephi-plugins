@@ -3,15 +3,15 @@ plugins {
 }
 
 group 'cz.cvut.fit.gephi'
-version '1.1.0'
+version '1.1.1'
 
 nbm {
     moduleName = 'cz.cvut.fit.gephi.multimode'
     moduleAuthor = 'Jaroslav Kuchar, Joan Codina'
     homePage = 'https://github.com/jaroslav-kuchar/Multimode-Networks'
-    licenseFile = file('license.txt')
-    // licenseName = 'license'
-    // sourceCodeUrl = 'https://github.com/totetmatt/gephi-plugins/tree/multimode-network'
+    licenseFile = file('gpl-3.0.txt')
+    // licenseName = 'GPL v3'
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins/tree/multimode-plugin'
 }
 
 dependencies {

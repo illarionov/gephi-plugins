@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'comsort'
-version '1.0.0'
+version '1.0.1'
 
 nbm {
     moduleName = 'comsort.polygon.shaped.nodes'

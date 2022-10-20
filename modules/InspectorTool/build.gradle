@@ -1,0 +1,33 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'com.atopion.gephi'
+version '0.2.1'
+
+nbm {
+    moduleName = 'com.atopion.gephi.inspector.tool'
+    moduleAuthor = 'atopion'
+    homePage = 'https://github.com/atopion/gephi-plugins'
+    licenseFile = file("Apache v2.txt")
+    // licenseName = 'Apache 2.0'
+    // authorEmail = 'website@atopion.com'
+    // authorUrl = 'atopion.com'
+    // sourceCodeUrl = 'https://github.com/atopion/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.tools.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.visualization) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.visualization.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.awt
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.util.lookup
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+}

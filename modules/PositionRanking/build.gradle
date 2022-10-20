@@ -1,0 +1,32 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.gephi'
+version '2.0.0'
+
+nbm {
+    moduleName = 'org.gephi.position.ranking.plugin'
+    moduleAuthor = 'Mathieu Bastian, Alexis Jacomy'
+    homePage = 'https://github.com/gephi/gephi-plugins/tree/position-ranking-plugin'
+    licenseFile = file('Apache v2.txt')
+    // licenseName = 'Apache 2.0'
+    // authorEmail = 'mathieu.bastian@gephi.org'
+    // authorUrl = ''
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins/tree/position-ranking-plugin'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.appearance.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.components) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.ui
+
+    testImplementation(libs.gephi.graph.api) { artifact {classifier = 'tests'; type = 'jar' } }
+    testRuntimeOnly(libs.gephi.project.api) { artifact { type = 'jar' } }
+    testImplementation libs.netbeans.modules.nbjunit
+}

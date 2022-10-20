@@ -1,0 +1,30 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'net.clementlevallois'
+version '1.2.1'
+
+nbm {
+    moduleName = 'net.clementlevallois.force.atlas.3d'
+    moduleAuthor = 'Clement Levallois (@seinecle)'
+    homePage = 'http://www.clementlevallois.net'
+    licenseFile = file("Apache v2.txt")
+    // licenseName = 'Apache v2'
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins/tree/force-atlas3d-plugin'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.layout.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.visualization) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.visualization.api) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

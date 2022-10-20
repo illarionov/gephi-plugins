@@ -12,7 +12,7 @@ repositories {
 }
 
 group 'net.phreakocious'
-version '1.0.8'
+version '1.0.9'
 
 nbm {
     moduleName = 'net.phreakocious.httpgraph'
@@ -20,13 +20,11 @@ nbm {
     homePage = 'http://phreakocious.net'
     licenseFile = file('license.txt')
     // licenseName = 'license'
-    // sourceCodeUrl = 'http://github.com/phreakocious/gephi-plugins'
+    // sourceCodeUrl = 'https://github.com/phreakocious/gephi-plugins'
 }
 
 dependencies {
-    providedCompile(libs.gephi.desktop.project) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.io.generator.api) { artifact { type = 'jar' } }
-    providedCompile(libs.gephi.io.generator.plugin) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.io.importer.plugin) { artifact { type = 'jar' } }
     providedCompile(libs.gephi.layout.api) { artifact { type = 'jar' } }
@@ -37,10 +35,10 @@ dependencies {
 
     annotationProcessor libs.netbeans.util
 
-    providedCompile libs.netbeans.api.progress
     providedCompile libs.netbeans.util
     providedCompile libs.netbeans.util.lookup
 
     implementation 'org.json:json:20160810'
-    implementation 'org.membrane-soa:service-proxy-core:4.3.0'
+    implementation 'org.membrane-soa:service-proxy-core:4.8.8'
+    implementation 'org.slf4j:slf4j-jdk14:1.7.36'
 }

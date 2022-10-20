@@ -1,0 +1,28 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'com.elwin013.gephi'
+version '1.0.1'
+
+nbm {
+    moduleName = 'com.elwin013.gephi.er.generator'
+    moduleAuthor = 'Kamil Banach'
+    homePage = 'https://github.com/elwin013/gephi-plugins/tree/er-generator'
+    licenseFile = file("LICENSE.txt")
+    // licenseName = 'MIT'
+    // authorEmail = 'kontakt@elwin013.com'
+    // authorUrl = 'https://github.com/elwin013'
+    // sourceCodeUrl = 'https://github.com/elwin013/gephi-plugins/tree/er-generator'
+}
+
+dependencies {
+    providedCompile(libs.gephi.io.generator.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+}

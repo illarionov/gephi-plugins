@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module-Name: Web Publish Plugin
+OpenIDE-Module-Display-Category: Export
+OpenIDE-Module-Short-Description: This plugin allows you to publish, visualize and share your network on the web, directly from Gephi.
+OpenIDE-Module-Long-Description: This plugin converts your network into a gexf file. This file is sent to a "Gist" of Github, where it becomes publicly accessible. Then, a link is created, which allows you to view, explore and share your network with the Retina web application. Be careful, do not publish your networks if the data is confidential\!
+OpenIDE-Module-Localizing-Bundle: net/clementlevallois/web/publish/plugin/controller/Bundle.properties

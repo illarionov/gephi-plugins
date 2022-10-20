@@ -1,0 +1,39 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'fr.totetmatt'
+version '2.0.3'
+
+nbm {
+    moduleName = 'fr.totetmatt.twitter.v2'
+    moduleAuthor = 'totetmatt'
+    homePage = 'http://github.com/gephi/gephi-plugins/twitter-v2'
+    licenseFile = file('LICENSE.txt')
+    // authorEmail = 'matthieu.totet+tsi@gmail.com'
+    // authorUrl = 'http://totetmatt.fr'
+    // sourceCodeUrl = 'https://github.com/totetmatt/gephi-plugins.git'
+    // licenseName = 'Apache 2.0'
+}
+
+dependencies {
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.desktop.project) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.modules.settings
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.modules.settings
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.windows
+
+    implementation 'com.vdurmont:emoji-java:4.0.0'
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'org.jsoup:jsoup:1.8.3'
+    implementation 'com.twitter:twitter-api-java-sdk:2.0.3'
+}

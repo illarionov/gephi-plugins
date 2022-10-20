@@ -7,11 +7,10 @@ version '1.0.0'
 
 nbm {
     moduleName = 'dk.icourts.graphfilter'
-    moduleAuthor = 'Ioannis Panagis'
+    moduleAuthor = 'Ioannis (Yannis) Panagis'
     homePage = 'http://jura.ku.dk/icourts/staff'
-    // licenseFile = file('apachegpl2.txt')
-    // licenseName = 'Apache 2 GPL'
-    // sourceCodeUrl = 'https://github.com/ypanagis/gephi-plugins'
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://jura.ku.dk/english/staff/research/?pure=en/persons/455258'
 }
 
 dependencies {

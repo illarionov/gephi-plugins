@@ -1,0 +1,45 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'net.clementlevallois'
+version '1.0.0'
+
+nbm {
+    moduleName = 'net.clementlevallois.web.publish.plugin'
+    moduleAuthor = 'Clement Levallois'
+    homePage = 'http://github.com/gephi/gephi-plugins/web-publish-plugin'
+    licenseFile = file('Apache-LICENSE-2.0.txt')
+    // authorEmail = 'admin@clementlevallois.net'
+    // authorUrl = 'https://nocodefunctions.com'
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins/tree/web-publish-plugin'
+    // licenseName = 'Apache 2.0'
+}
+
+dependencies {
+    providedCompile(libs.gephi.desktop.import) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.desktop.io.export) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.exporter.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.awt
+    annotationProcessor libs.netbeans.dialogs
+    annotationProcessor libs.netbeans.util
+    annotationProcessor libs.netbeans.windows
+
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+    providedCompile libs.netbeans.windows
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    testImplementation(libs.gephi.graph.api) { artifact {classifier = 'tests'; type = 'jar' } }
+    testImplementation libs.netbeans.modules.nbjunit
+}

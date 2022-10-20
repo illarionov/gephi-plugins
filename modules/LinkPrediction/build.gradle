@@ -1,0 +1,42 @@
+plugins {
+    id 'netbeans-module'
+    id 'jacoco'
+}
+
+group 'org.gephi.plugins'
+version '1.3.1'
+
+nbm {
+    moduleName = 'org.gephi.plugins.link.prediction'
+    moduleAuthor = 'Marco Romanutti, Saskia Schueler'
+    homePage = 'https://github.com/gephi/gephi-plugins/tree/link-prediction-plugin'
+    licenseFile = file('Apache v2.txt')
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins/tree/link-prediction-plugin'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.filters.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.plugin) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    testImplementation libs.netbeans.modules.nbjunit
+}
+
+def jacocoTestReportTask = tasks.named('jacocoTestReport')
+def testTask = tasks.named('test')
+testTask.configure {
+    finalizedBy jacocoTestReportTask
+}
+jacocoTestReportTask.configure {
+    dependsOn testTask
+}

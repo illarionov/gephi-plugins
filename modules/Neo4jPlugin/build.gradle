@@ -1,0 +1,45 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'ouestware'
+version '4.0.0'
+
+nbm {
+    moduleName = 'ouestware.neo4j.plugin'
+    moduleAuthor = 'Benoit Simard'
+    homePage = 'https://github.com/gephi/gephi-plugins'
+    licenseFile = file('Apache v2.txt')
+    // authorEmail = 'contact@bsimard.com'
+    // authorUrl = 'https://wwww.ouestware.com/en'
+    // licenseName = 'Apache 2.0'
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.io.importer.api) {
+        artifact { type = 'jar' }
+        exclude group: 'org.gephi', module: 'db.drivers'
+    }
+    providedCompile(libs.gephi.project.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.dialogs
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.api.annotations.common
+    providedCompile libs.netbeans.awt
+    providedCompile libs.netbeans.dialogs
+    providedCompile libs.netbeans.io
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
+
+    implementation 'org.neo4j.driver:neo4j-java-driver:4.3.4'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+
+    testImplementation 'org.testcontainers:testcontainers:1.17.3'
+    testImplementation 'org.testcontainers:neo4j:1.17.3'
+}

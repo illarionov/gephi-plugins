@@ -3,12 +3,13 @@ plugins {
 }
 
 group 'upf'
-version '1.0.0'
+version '1.0.1'
 
 nbm {
     moduleName = 'upf.group.partition.gephi.plugin'
-    moduleAuthor = 'Marc Torrelles, Sergi Puig'
+    moduleAuthor = 'Sergi Puig, Marc Torrelles'
     homePage = 'http://github.com/gephi/gephi-plugins/group-partition-gephi-plugin'
+    licenseFile = file('Apache v2.txt')
     // licenseName = 'Apache 2.0'
     // authorUrl = 'https://github.com/sergipuig'
     // sourceCodeUrl = 'https://github.com/sergipuig/gephi-plugins'
@@ -25,6 +26,7 @@ dependencies {
     providedCompile libs.netbeans.dialogs
     providedCompile libs.netbeans.util
     providedCompile libs.netbeans.util.lookup
+    providedCompile libs.netbeans.util.ui
 
     implementation libs.javax.annotation.api
 }

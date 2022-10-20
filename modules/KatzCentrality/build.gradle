@@ -1,0 +1,34 @@
+plugins {
+    id 'netbeans-module'
+}
+
+group 'org.openuniversityofisrael'
+version '1.0.1'
+
+nbm {
+    moduleName = 'org.openuniversityofisrael.katz.centrality'
+    moduleAuthor = 'Yossi Spektor'
+    homePage = 'http://github.com/gephi/gephi-plugins/katz-centrality'
+    // licenseName = 'Apache 2.0'
+    // authorEmail = 'easpex@gmail.com'
+    // authorUrl = 'https://spektor.dev'
+    // sourceCodeUrl = 'https://github.com/gephi/gephi-plugins/tree/master-forge/modules/KatzCentrality'
+}
+
+dependencies {
+    providedCompile(libs.gephi.core.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.graph.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.statistics.api) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.ui.library.wrapper) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils) { artifact { type = 'jar' } }
+    providedCompile(libs.gephi.utils.longtask) { artifact { type = 'jar' } }
+
+    annotationProcessor libs.netbeans.util
+
+    providedCompile libs.netbeans.util
+    providedCompile libs.netbeans.util.lookup
+
+    testImplementation(libs.gephi.graph.api) { artifact {classifier = 'tests'; type = 'jar' } }
+    testRuntimeOnly(libs.gephi.project.api) { artifact { type = 'jar' } }
+    testImplementation libs.netbeans.modules.nbjunit
+}
